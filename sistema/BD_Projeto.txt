@@ -1,0 +1,86 @@
+create database sistema;
+
+use sistema;
+
+
+CREATE TABLE produtos (
+
+id int PRIMARY KEY auto_increment,
+
+nome varchar (50),
+
+preco decimal(7,2)
+
+);
+
+
+CREATE TABLE nota_fiscal (
+
+nf int PRIMARY KEY auto_increment,
+
+data date,
+
+valor_total decimal (7,2)
+
+);
+
+
+CREATE TABLE itens_nf (
+
+id int PRIMARY KEY auto_increment,
+
+cod_produto int,
+num_nf int,
+
+qtde int,
+
+subtotal decimal (7,2),
+
+FOREIGN KEY(cod_produto)
+ REFERENCES produtos (id),
+
+FOREIGN KEY(num_nf) REFERENCES
+ nota_fiscal (nf)
+
+);
+
+
+
+INSERT INTO produtos (nome, preco) VALUES
+
+('Arroz', 23.50),
+('Farofa', 4.40),
+('Molho', 6.90),
+('Sardinha', 10.00),
+('Sabonete', 1.80),
+('Sal', 0.40),
+('Gelatina', 15.35),
+('Farinha de Trigo', 9.95),
+('Creme Dental', 2.00),
+('Margarina', 1.50);
+
+
+CREATE TABLE cliente(
+
+codCli int PRIMARY KEY auto_increment,
+
+email varchar (50),
+
+senha varchar (50)
+
+);
+
+
+INSERT INTO cliente (email, senha) VALUES
+
+('sarah@gmail.com', '12'),
+('pedro@email.com', '123'),
+('rute@hotmail.com', '154'),
+('mileny@gmail.com', '123456'),
+('valeria@email.com', '478'),
+('claudiney_ney@gmail.com', '47'),
+('cassia@yahoo.com', '147415'),
+('sidney12@gmail.com', '4744'),
+('daniela_dani@gmail.com', '56124'),
+('giovanna@gmail.com', '12354');
+

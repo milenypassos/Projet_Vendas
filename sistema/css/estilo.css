@@ -1,0 +1,23 @@
+.navbar .centro{
+	margin-left: auto;
+	margin-right: auto;
+	color:#000;
+}
+.container h1{
+	font-size: 2em;
+	text-align: center;
+	width: 100%
+	color: #000;
+}
+.container h2{
+	margin-top: 10px;
+	font-size: 1.2em;
+	text-align: center;
+	width: 100%;
+	color: #000;
+}
+.container .card{
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
